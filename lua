@@ -22,7 +22,7 @@ local Settings = {
     }
 }
 
-local SelectedPart = "LowerTorso" --recommended is "LowerTorso" or "HumanoidRootPart"                                    
+local SelectedPart = "UpperTorso" --recommended is "LowerTorso" or "HumanoidRootPart"                                    
 local Prediction = true
 local PredictionValue = 0.1225 --dont change                                     
 
@@ -299,8 +299,8 @@ local PredictionValue = 0.1225 --dont change
 
 --the cam lock
 
-getgenv().Prediction = 0.1248710929171	
-getgenv().AimPart = "LowerTorso"	
+getgenv().Prediction = 0.143	
+getgenv().AimPart = "UpperTorso"	
 getgenv().Key = "Q"	
 getgenv().DisableKey = "P"	
 	
