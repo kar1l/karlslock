@@ -24,7 +24,7 @@ local Settings = {
 
 local SelectedPart = "UpperTorso" --recommended is "LowerTorso" or "HumanoidRootPart"                                    
 local Prediction = true
-local PredictionValue = 0.1225 --dont change                                     
+local PredictionValue = 0.1229                                    
 
 
     local AnchorCount = 0 --dont change
