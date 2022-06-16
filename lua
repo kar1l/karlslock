@@ -299,7 +299,7 @@ local PredictionValue = 0.1229
 
 --the cam lock
 
-getgenv().Prediction = 0.143	
+getgenv().Prediction = 0.140	
 getgenv().AimPart = "UpperTorso"	
 getgenv().Key = "Q"	
 getgenv().DisableKey = "P"	
