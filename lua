@@ -1,14 +1,3 @@
---[[
-
-██╗  ██╗ █████╗ ██████╗ ██╗    ██╗    ██╗
-██║ ██╔╝██╔══██╗██╔══██╗██║    ██║    ██║
-█████╔╝ ███████║██████╔╝██║    ██║ █╗ ██║
-██╔═██╗ ██╔══██║██╔══██╗██║    ██║███╗██║
-██║  ██╗██║  ██║██║  ██║██████╗╚███╔███╔╝
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══╝╚══╝ 
-
-]]--
-
 local Settings = {
     rewrittenmain = {
         Enabled = true,
@@ -22,13 +11,13 @@ local Settings = {
     }
 }
 
-local SelectedPart = "UpperTorso"                                    
+local SelectedPart = "UpperTorso"                                   
 local Prediction = true
-local PredictionValue = 0.12467245219812                                    
+local PredictionValue = 0.12467245219812                                     
 
 
-    local AnchorCount = 0 --dont change
-    local MaxAnchor = 50 --dont change
+    local AnchorCount = 0
+    local MaxAnchor = 50
 
     local CC = game:GetService"Workspace".CurrentCamera
     local Plr;
@@ -71,7 +60,7 @@ local PredictionValue = 0.12467245219812
     function noob(player)
         local character
         repeat wait() until player.Character
-        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(255, 0, 236), 0.3, 3)
+        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(0, 0, 128), 0.3, 3)
         handler.Name = player.Name
         player.CharacterAdded:connect(function(Char) handler.Adornee = Char:WaitForChild(SelectedPart) end)
 
@@ -104,7 +93,7 @@ local PredictionValue = 0.12467245219812
         end
         placemarker.Transparency = 1
         if Settings.rewrittenmain.DOT then
-        makemarker(placemarker, placemarker, Color3.fromRGB(255, 0, 236), 0.40, 0)
+        makemarker(placemarker, placemarker, Color3.fromRGB(0, 0, 128), 0.40, 0)
         end
     end)
 
@@ -118,7 +107,7 @@ local PredictionValue = 0.12467245219812
 						Title = "esex? karl#7760",
 						Text = "(Unlocked) ",
 						Icon = "",
-						Duration = 1,
+						Duration = 3,
 })
             end
             else
@@ -130,7 +119,7 @@ local PredictionValue = 0.12467245219812
 						Title = "esex? karl#7760",
 						Text = "(Locked) :"..tostring(Plr.Name); 
 						Icon = "",
-						Duration = 1,
+						Duration = 3,
 })
 
                 end
@@ -202,20 +191,20 @@ local PredictionValue = 0.12467245219812
         local args = {...}
         if enabled and getnamecallmethod() == "FireServer" and args[2] == "UpdateMousePos" and Settings.rewrittenmain.Enabled and Plr.Character ~= nil then
 
-             args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*accomidationfactor)
-            
+            -- args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*accomidationfactor)
+            --[[
             if Settings.rewrittenmain.AIRSHOT == true then
                 if game.Workspace.Players[Plr.Name].Humanoid:GetState() == Enum.HumanoidStateType.Freefall then -- Plr.Character:WaitForChild("Humanoid"):GetState() == Enum.HumanoidStateType.Freefall
                     
                     --// Airshot
-                    args[3] = Plr.Character.LowerTorso.Position+(Plr.Character.LowerTorso.Velocity*PredictionValue)
+                    args[3] = Plr.Character.LeftFoot.Position+(Plr.Character.LeftFoot.Velocity*PredictionValue)
                 else
-                    args[3] = Plr.Character.UpperTorso.Position+(Plr.Character.UpperTorso.Velocity*PredictionValue)
+                    args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*PredictionValue)
                 end
             else
-                    args[3] = Plr.Character.UpperTorso.Position+(Plr.Character.UpperTorso.Velocity*PredictionValue)
+                    args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*PredictionValue)
             end
-            
+            ]]
             if Prediction == true then
                 
             args[3] = Plr.Character[SelectedPart].Position+(Plr.Character[SelectedPart].Velocity*PredictionValue)
@@ -253,7 +242,7 @@ local PredictionValue = 0.12467245219812
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "LowerTorso"
+                SelectedPart = "HumanoidRootPart"
 
             else
                 --// Anchor Check
@@ -270,7 +259,7 @@ local PredictionValue = 0.12467245219812
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "UpperTorso"
+                SelectedPart = "HumanoidRootPart"
 
             end
             else
@@ -289,22 +278,24 @@ local PredictionValue = 0.12467245219812
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "UpperTorso"
+                SelectedPart = "HumanoidRootPart"
             end
 
         else
-                SelectedPart = "UpperTorso"
+                SelectedPart = "HumanoidRootPart"
         end
     end)
 
-getgenv().Prediction = 0.1248710929171	
+--the cam lock
+
+getgenv().Prediction = 0.143	
 getgenv().AimPart = "UpperTorso"	
 getgenv().Key = "Q"	
 getgenv().DisableKey = "P"	
 	
-getgenv().FOV = false	
+getgenv().FOV = true	
 getgenv().ShowFOV = false	
-getgenv().FOVSize = 10	
+getgenv().FOVSize = 55	
 	
 --// Variables (Service)	
 	
@@ -326,8 +317,8 @@ local Locked
 local Victim	
 	
 local SelectedKey = getgenv().Key	
-local SelectedDisableKey = getgenv().DisableKey		
-	
+local SelectedDisableKey = getgenv().DisableKey	
+		
 --// Check if aimlock is loaded	
 	
 if getgenv().Loaded == true then	
@@ -483,4 +474,4 @@ elseif ping < 20 then
 getgenv().Prediction = 0.157	
         end	
         end	
-	end
+	end 
