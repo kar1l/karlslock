@@ -22,9 +22,9 @@ local Settings = {
     }
 }
 
-local SelectedPart = "UpperTorso" --recommended                                    
+local SelectedPart = "UpperTorso"                                    
 local Prediction = true
-local PredictionValue = 0.1229                                    
+local PredictionValue = 0.12467245219812                                    
 
 
     local AnchorCount = 0 --dont change
@@ -71,7 +71,7 @@ local PredictionValue = 0.1229
     function noob(player)
         local character
         repeat wait() until player.Character
-        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(0, 0, 128), 0.3, 3)
+        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(255, 0, 236), 0.3, 3)
         handler.Name = player.Name
         player.CharacterAdded:connect(function(Char) handler.Adornee = Char:WaitForChild(SelectedPart) end)
 
@@ -96,7 +96,7 @@ local PredictionValue = 0.1229
 
     spawn(function()
         placemarker.Anchored = true
-        placemarker.CanCollide = false
+        placemarker.CanCollide = true
         if Settings.rewrittenmain.DOT == true then
         placemarker.Size = Vector3.new(8, 8, 8)
         else
@@ -104,7 +104,7 @@ local PredictionValue = 0.1229
         end
         placemarker.Transparency = 1
         if Settings.rewrittenmain.DOT then
-        makemarker(placemarker, placemarker, Color3.fromRGB(0, 0, 128), 0.40, 0)
+        makemarker(placemarker, placemarker, Color3.fromRGB(255, 0, 236), 0.40, 0)
         end
     end)
 
@@ -118,7 +118,7 @@ local PredictionValue = 0.1229
 						Title = "esex? karl#7760",
 						Text = "(Unlocked) ",
 						Icon = "",
-						Duration = 3,
+						Duration = 1,
 })
             end
             else
@@ -130,7 +130,7 @@ local PredictionValue = 0.1229
 						Title = "esex? karl#7760",
 						Text = "(Locked) :"..tostring(Plr.Name); 
 						Icon = "",
-						Duration = 3,
+						Duration = 1,
 })
 
                 end
@@ -202,20 +202,20 @@ local PredictionValue = 0.1229
         local args = {...}
         if enabled and getnamecallmethod() == "FireServer" and args[2] == "UpdateMousePos" and Settings.rewrittenmain.Enabled and Plr.Character ~= nil then
 
-            -- args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*accomidationfactor)
-            --[[
+             args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*accomidationfactor)
+            
             if Settings.rewrittenmain.AIRSHOT == true then
                 if game.Workspace.Players[Plr.Name].Humanoid:GetState() == Enum.HumanoidStateType.Freefall then -- Plr.Character:WaitForChild("Humanoid"):GetState() == Enum.HumanoidStateType.Freefall
                     
                     --// Airshot
-                    args[3] = Plr.Character.LeftFoot.Position+(Plr.Character.LeftFoot.Velocity*PredictionValue)
+                    args[3] = Plr.Character.LowerTorso.Position+(Plr.Character.LowerTorso.Velocity*PredictionValue)
                 else
-                    args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*PredictionValue)
+                    args[3] = Plr.Character.UpperTorso.Position+(Plr.Character.UpperTorso.Velocity*PredictionValue)
                 end
             else
-                    args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*PredictionValue)
+                    args[3] = Plr.Character.UpperTorso.Position+(Plr.Character.UpperTorso.Velocity*PredictionValue)
             end
-            ]]
+            
             if Prediction == true then
                 
             args[3] = Plr.Character[SelectedPart].Position+(Plr.Character[SelectedPart].Velocity*PredictionValue)
@@ -253,7 +253,7 @@ local PredictionValue = 0.1229
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "LeftFoot"
+                SelectedPart = "LowerTorso"
 
             else
                 --// Anchor Check
@@ -270,7 +270,7 @@ local PredictionValue = 0.1229
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "HumanoidRootPart"
+                SelectedPart = "UpperTorso"
 
             end
             else
@@ -289,22 +289,22 @@ local PredictionValue = 0.1229
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "HumanoidRootPart"
+                SelectedPart = "UpperTorso"
             end
 
         else
-                SelectedPart = "HumanoidRootPart"
+                SelectedPart = "UpperTorso"
         end
     end)
 
 getgenv().Prediction = 0.1248710929171	
-getgenv().AimPart = "HumanoidRootPart"	
+getgenv().AimPart = "UpperTorso"	
 getgenv().Key = "Q"	
 getgenv().DisableKey = "P"	
 	
 getgenv().FOV = true	
-getgenv().ShowFOV = false	
-getgenv().FOVSize = 55	
+getgenv().ShowFOV = true	
+getgenv().FOVSize = 10	
 	
 --// Variables (Service)	
 	
