@@ -96,7 +96,7 @@ local PredictionValue = 0.12467245219812
 
     spawn(function()
         placemarker.Anchored = true
-        placemarker.CanCollide = true
+        placemarker.CanCollide = false
         if Settings.rewrittenmain.DOT == true then
         placemarker.Size = Vector3.new(8, 8, 8)
         else
@@ -302,8 +302,8 @@ getgenv().AimPart = "UpperTorso"
 getgenv().Key = "Q"	
 getgenv().DisableKey = "P"	
 	
-getgenv().FOV = true	
-getgenv().ShowFOV = true	
+getgenv().FOV = false	
+getgenv().ShowFOV = false	
 getgenv().FOVSize = 10	
 	
 --// Variables (Service)	
