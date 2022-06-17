@@ -107,7 +107,7 @@ local PredictionValue = 0.12467245219812
 						Title = "esex? karl#7760",
 						Text = "(Unlocked) ",
 						Icon = "",
-						Duration = 3,
+						Duration = 1,
 })
             end
             else
@@ -119,7 +119,7 @@ local PredictionValue = 0.12467245219812
 						Title = "esex? karl#7760",
 						Text = "(Locked) :"..tostring(Plr.Name); 
 						Icon = "",
-						Duration = 3,
+						Duration = 1,
 })
 
                 end
