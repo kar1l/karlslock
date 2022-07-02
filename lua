@@ -1,19 +1,54 @@
+--[[
+
+██╗  ██╗ █████╗ ██████╗ ██╗    ██╗    ██╗
+██║ ██╔╝██╔══██╗██╔══██╗██║    ██║    ██║
+█████╔╝ ███████║██████╔╝██║    ██║ █╗ ██║
+██╔═██╗ ██╔══██║██╔══██╗██║    ██║███╗██║
+██║  ██╗██║  ██║██║  ██║██████╗╚███╔███╔╝
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══╝╚══╝ 
+
+
+
+
+
+           if ping < 130 then
+                PredictionValue = 0.151
+            elseif ping < 125 then
+                PredictionValue = 0.149
+            elseif ping < 110 then
+                PredictionValue = 0.146
+            elseif ping < 105 then
+                PredictionValue = 0.138
+            elseif ping < 90 then
+                PredictionValue = 0.136
+            elseif ping < 80 then
+                PredictionValue = 0.134
+            elseif ping < 70 then
+                PredictionValue = 0.131
+            elseif ping < 60 then
+                PredictionValue = 0.1229
+            elseif ping < 50 then
+                PredictionValue = 0.1225
+            elseif ping < 40 then
+                PredictionValue = 0.1256
+		--]]
+
 local Settings = {
     rewrittenmain = {
-        Enabled = true,
-        Key = "q",
-        DOT = true,
-        AIRSHOT = true,
-        NOTIF = true,
-        AUTOPRED = false,
+        Enabled = true, --this is if its enabled
+        Key = "q", --the lock key, u can change it
+        DOT = true, -- this is teh dot (recommended)
+        AIRSHOT = true, --easier to airshot
+        NOTIF = true, --the notification 
+        AUTOPRED = false, --auto prediction, makes the lock sort of bad but can play on 20-120+ pibg
         FOV = math.huge,
-        RESOVLER = false
+        RESOVLER = false --useless
     }
 }
 
-local SelectedPart = "UpperTorso"                                   
+local SelectedPart = "UpperTorso"                              
 local Prediction = true
-local PredictionValue = 0.12467245219812                                     
+local PredictionValue = 0.1247                                
 
 
     local AnchorCount = 0
@@ -22,7 +57,7 @@ local PredictionValue = 0.12467245219812
     local CC = game:GetService"Workspace".CurrentCamera
     local Plr;
     local enabled = false
-    local accomidationfactor = 0.1234772452176
+    local accomidationfactor = 0.12348
     local mouse = game.Players.LocalPlayer:GetMouse()
     local placemarker = Instance.new("Part", game.Workspace)
 
@@ -116,7 +151,7 @@ local PredictionValue = 0.12467245219812
                 if Settings.rewrittenmain.NOTIF == true then
 
                     game.StarterGui:SetCore("SendNotification", {
-						Title = "esex? karl#7760",
+						Title = "esex? karl#7760", --THE NOTIFIACTION MESSAGE
 						Text = "(Locked) :"..tostring(Plr.Name); 
 						Icon = "",
 						Duration = 1,
