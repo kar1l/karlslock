@@ -37,10 +37,10 @@ local Settings = {
     rewrittenmain = {
         Enabled = true, --this is if its enabled
         Key = "q", --the lock key, u can change it
-        DOT = true, -- this is teh dot (recommended)
+        DOT = true, -- this is the dot (recommended)
         AIRSHOT = true, --easier to airshot
         NOTIF = true, --the notification 
-        AUTOPRED = false, --auto prediction, makes the lock sort of bad but can play on 20-120+ pibg
+        AUTOPRED = false, --auto prediction, makes the lock sort of bad but can play on 20-120+ ping
         FOV = math.huge,
         RESOVLER = false --useless
     }
@@ -48,7 +48,7 @@ local Settings = {
 
 local SelectedPart = "UpperTorso"                              
 local Prediction = true
-local PredictionValue = 0.1247                                
+local PredictionValue = 0.124710957129853976290862                                
 
 
     local AnchorCount = 0
@@ -323,10 +323,10 @@ local PredictionValue = 0.1247
 
 --the cam lock
 
-getgenv().Prediction = 0.143	
+getgenv().Prediction = 0.143105125985120958176	
 getgenv().AimPart = "UpperTorso"	
 getgenv().Key = "Q"	
-getgenv().DisableKey = "P"	
+getgenv().DisableKey = "*"	
 	
 getgenv().FOV = true	
 getgenv().ShowFOV = false	
