@@ -45,7 +45,7 @@ local PredictionValue = 0.1247199
         e.AlwaysOnTop = Settings.rewrittenmain.DOT
         local a = Instance.new("Frame", e)
         if Settings.rewrittenmain.DOT == true then
-        a.Size = UDim2.new(5, 0, 5, 0)
+        a.Size = UDim2.new(2, 0, 2, 0)
         else
         a.Size = UDim2.new(0, 0, 0, 0)
         end
@@ -71,7 +71,7 @@ local PredictionValue = 0.1247199
     function noob(player)
         local character
         repeat wait() until player.Character
-        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(0, 0, 128), 0.3, 3)
+        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(250, 255, 167), 0.3, 3)
         handler.Name = player.Name
         player.CharacterAdded:connect(function(Char) handler.Adornee = Char:WaitForChild(SelectedPart) end)
 
