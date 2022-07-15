@@ -130,7 +130,7 @@ local PredictionValue = 0.124197
 						Title = "Locked on",
 						Text = ""..tostring(Plr.Name); 
 						Icon = "",
-						Duration = 1,
+						Duration = 2,
 })
 
                 end
