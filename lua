@@ -7,24 +7,48 @@
 ██║  ██╗██║  ██║██║  ██║██████╗╚███╔███╔╝
 ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══╝╚══╝ 
 
---]]
+
+
+
+
+           if ping < 130 then
+                PredictionValue = 0.151
+            elseif ping < 125 then
+                PredictionValue = 0.149
+            elseif ping < 110 then
+                PredictionValue = 0.146
+            elseif ping < 105 then
+                PredictionValue = 0.138
+            elseif ping < 90 then
+                PredictionValue = 0.136
+            elseif ping < 80 then
+                PredictionValue = 0.134
+            elseif ping < 70 then
+                PredictionValue = 0.131
+            elseif ping < 60 then
+                PredictionValue = 0.1229
+            elseif ping < 50 then
+                PredictionValue = 0.1225
+            elseif ping < 40 then
+                PredictionValue = 0.1256
+		--]]
 
 local Settings = {
     rewrittenmain = {
-        Enabled = true, 
-        Key = "q", 
-        DOT = true, 
-        AIRSHOT = true, 
-        NOTIF = true, 
-        AUTOPRED = false, 
+        Enabled = true, --this is if its enabled
+        Key = "q", --the lock key, u can change it
+        DOT = true, -- this is the dot (recommended)
+        AIRSHOT = true, --easier to airshot
+        NOTIF = true, --the notification 
+        AUTOPRED = false, --auto prediction, makes the lock sort of bad but can play on 20-120+ ping
         FOV = math.huge,
-        RESOVLER = false
+        RESOVLER = false --useless
     }
 }
 
 local SelectedPart = "UpperTorso"                              
 local Prediction = true
-local PredictionValue = 0.124197                     
+local PredictionValue = 0.124710957129853976290862                                
 
 
     local AnchorCount = 0
@@ -45,7 +69,7 @@ local PredictionValue = 0.124197
         e.AlwaysOnTop = Settings.rewrittenmain.DOT
         local a = Instance.new("Frame", e)
         if Settings.rewrittenmain.DOT == true then
-        a.Size = UDim2.new(2, 0, 2, 0)
+        a.Size = UDim2.new(5, 0, 5, 0)
         else
         a.Size = UDim2.new(0, 0, 0, 0)
         end
@@ -71,7 +95,7 @@ local PredictionValue = 0.124197
     function noob(player)
         local character
         repeat wait() until player.Character
-        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGBw(255, 0, 0), 0.3, 3)
+        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(0, 0, 128), 0.3, 3)
         handler.Name = player.Name
         player.CharacterAdded:connect(function(Char) handler.Adornee = Char:WaitForChild(SelectedPart) end)
 
@@ -104,7 +128,7 @@ local PredictionValue = 0.124197
         end
         placemarker.Transparency = 1
         if Settings.rewrittenmain.DOT then
-        makemarker(placemarker, placemarker, Color3.fromRGB(255, 0, 0), 0.40, 0)
+        makemarker(placemarker, placemarker, Color3.fromRGB(0, 0, 128), 0.40, 0)
         end
     end)
 
@@ -115,10 +139,10 @@ local PredictionValue = 0.124197
                 if Settings.rewrittenmain.NOTIF == true then
                     Plr = getClosestPlayerToCursor()
                 game.StarterGui:SetCore("SendNotification", {
-						Title = "Unlocked",
-						Text = "hope you shit on them ",
+						Title = "esex? karl#7760",
+						Text = "(Unlocked) ",
 						Icon = "",
-						Duration = 2,
+						Duration = 1,
 })
             end
             else
@@ -127,8 +151,8 @@ local PredictionValue = 0.124197
                 if Settings.rewrittenmain.NOTIF == true then
 
                     game.StarterGui:SetCore("SendNotification", {
-						Title = "Locked on",
-						Text = ""..tostring(Plr.Name); 
+						Title = "esex? karl#7760", --THE NOTIFIACTION MESSAGE
+						Text = "(Locked) :"..tostring(Plr.Name); 
 						Icon = "",
 						Duration = 1,
 })
@@ -253,7 +277,7 @@ local PredictionValue = 0.124197
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "LowerTorso"
+                SelectedPart = "HumanoidRootPart"
 
             else
                 --// Anchor Check
@@ -295,14 +319,14 @@ local PredictionValue = 0.124197
         else
                 SelectedPart = "HumanoidRootPart"
         end
-    end
-    
---ends here
+    end)
 
-getgenv().Prediction = 0.141591
+--the cam lock
+
+getgenv().Prediction = 0.143105125985120958176	
 getgenv().AimPart = "UpperTorso"	
 getgenv().Key = "Q"	
-getgenv().DisableKey = "B"	
+getgenv().DisableKey = "*"	
 	
 getgenv().FOV = true	
 getgenv().ShowFOV = false	
