@@ -253,7 +253,7 @@ local PredictionValue = 0.0.1247199
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "HumanoidRootPart"
+                SelectedPart = "UpperTorso"
 
             else
                 --// Anchor Check
@@ -270,7 +270,7 @@ local PredictionValue = 0.0.1247199
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "HumanoidRootPart"
+                SelectedPart = "UpperTorso"
 
             end
             else
@@ -289,11 +289,11 @@ local PredictionValue = 0.0.1247199
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "HumanoidRootPart"
+                SelectedPart = "UpperTorso"
             end
 
         else
-                SelectedPart = "HumanoidRootPart"
+                SelectedPart = "UpperTorso"
         end
     end)
 
