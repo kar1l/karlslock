@@ -24,7 +24,7 @@ local Settings = {
 
 local SelectedPart = "UpperTorso"                              
 local Prediction = true
-local PredictionValue = 0.1247199                      
+local PredictionValue = 0.124197                     
 
 
     local AnchorCount = 0
@@ -71,7 +71,7 @@ local PredictionValue = 0.1247199
     function noob(player)
         local character
         repeat wait() until player.Character
-        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(250, 255, 167), 0.3, 3)
+        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGBrgb(255, 0, 0), 0.3, 3)
         handler.Name = player.Name
         player.CharacterAdded:connect(function(Char) handler.Adornee = Char:WaitForChild(SelectedPart) end)
 
@@ -104,7 +104,7 @@ local PredictionValue = 0.1247199
         end
         placemarker.Transparency = 1
         if Settings.rewrittenmain.DOT then
-        makemarker(placemarker, placemarker, Color3.fromRGB(0, 0, 128), 0.40, 0)
+        makemarker(placemarker, placemarker, Color3.fromRGBrgb(255, 0, 0), 0.40, 0)
         end
     end)
 
@@ -116,9 +116,9 @@ local PredictionValue = 0.1247199
                     Plr = getClosestPlayerToCursor()
                 game.StarterGui:SetCore("SendNotification", {
 						Title = "Unlocked",
-						Text = "",
-						Icon = "",
-						Duration = 1.5,
+						Text = "hope you shit on them",
+						Icon = "http://www.roblox.com/asset/?id=265790768",
+						Duration = 2,
 })
             end
             else
@@ -129,8 +129,8 @@ local PredictionValue = 0.1247199
                     game.StarterGui:SetCore("SendNotification", {
 						Title = "Locked on",
 						Text = ""..tostring(Plr.Name); 
-						Icon = "",
-						Duration = 1.5,
+						Icon = "http://www.roblox.com/asset/?id=265790768",
+						Duration = 1,
 })
 
                 end
