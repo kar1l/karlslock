@@ -130,7 +130,7 @@ local PredictionValue = 0.124197
 						Title = "Locked on",
 						Text = ""..tostring(Plr.Name); 
 						Icon = "",
-						Duration = 2,
+						Duration = 1,
 })
 
                 end
@@ -296,6 +296,8 @@ local PredictionValue = 0.124197
                 SelectedPart = "HumanoidRootPart"
         end
     end
+    
+--ends here
 
 getgenv().Prediction = 0.141591
 getgenv().AimPart = "UpperTorso"	
