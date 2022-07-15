@@ -117,7 +117,7 @@ local PredictionValue = 0.124197
                 game.StarterGui:SetCore("SendNotification", {
 						Title = "Unlocked",
 						Text = "hope you shit on them",
-						Icon = "http://www.roblox.com/asset/?id=265790768",
+						Icon = "",
 						Duration = 2,
 })
             end
@@ -129,7 +129,7 @@ local PredictionValue = 0.124197
                     game.StarterGui:SetCore("SendNotification", {
 						Title = "Locked on",
 						Text = ""..tostring(Plr.Name); 
-						Icon = "http://www.roblox.com/asset/?id=265790768",
+						Icon = "",
 						Duration = 1,
 })
 
