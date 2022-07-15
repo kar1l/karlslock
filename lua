@@ -18,7 +18,7 @@ local Settings = {
         NOTIF = true, 
         AUTOPRED = false, 
         FOV = math.huge,
-        RESOVLER = true
+        RESOVLER = false
     }
 }
 
@@ -71,7 +71,7 @@ local PredictionValue = 0.124197
     function noob(player)
         local character
         repeat wait() until player.Character
-        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGBrgb(255, 0, 0), 0.3, 3)
+        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGBw(255, 0, 0), 0.3, 3)
         handler.Name = player.Name
         player.CharacterAdded:connect(function(Char) handler.Adornee = Char:WaitForChild(SelectedPart) end)
 
@@ -104,7 +104,7 @@ local PredictionValue = 0.124197
         end
         placemarker.Transparency = 1
         if Settings.rewrittenmain.DOT then
-        makemarker(placemarker, placemarker, Color3.fromRGBrgb(255, 0, 0), 0.40, 0)
+        makemarker(placemarker, placemarker, Color3.fromRGB(255, 0, 0), 0.40, 0)
         end
     end)
 
@@ -116,7 +116,7 @@ local PredictionValue = 0.124197
                     Plr = getClosestPlayerToCursor()
                 game.StarterGui:SetCore("SendNotification", {
 						Title = "Unlocked",
-						Text = "hope you shit on them",
+						Text = "hope you shit on them ",
 						Icon = "",
 						Duration = 2,
 })
@@ -253,7 +253,7 @@ local PredictionValue = 0.124197
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "UpperTorso"
+                SelectedPart = "LowerTorso"
 
             else
                 --// Anchor Check
@@ -270,7 +270,7 @@ local PredictionValue = 0.124197
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "UpperTorso"
+                SelectedPart = "HumanoidRootPart"
 
             end
             else
@@ -289,15 +289,13 @@ local PredictionValue = 0.124197
                     AnchorCount = 0;
                 end
 
-                SelectedPart = "UpperTorso"
+                SelectedPart = "HumanoidRootPart"
             end
 
         else
-                SelectedPart = "UpperTorso"
+                SelectedPart = "HumanoidRootPart"
         end
-    end)
-
---the cam lock
+    end
 
 getgenv().Prediction = 0.141591
 getgenv().AimPart = "UpperTorso"	
