@@ -47,7 +47,7 @@ local PredictionValue = 0.1259910
         e.AlwaysOnTop = Settings.rewrittenmain.DOT
         local a = Instance.new("Frame", e)
         if Settings.rewrittenmain.DOT == true then
-        a.Size = UDim2.new(1, 1, 1)
+        a.Size = UDim2.new(2, 2, 2)
         else
         a.Size = UDim2.new(0, 0, 0, 0)
         end
@@ -104,7 +104,7 @@ local PredictionValue = 0.1259910
         else
         placemarker.Size = Vector3.new(0, 0, 0)
         end
-        placemarker.Transparency = 0.90
+        placemarker.Transparency = 0.79
         if Settings.rewrittenmain.DOT then
         makemarker(placemarker, placemarker, Color3.fromRGB(68, 214, 44), 0.40, 0)
         end
