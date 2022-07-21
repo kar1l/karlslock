@@ -47,7 +47,7 @@ local PredictionValue = 0.124710957129853976290862
         e.AlwaysOnTop = Settings.rewrittenmain.DOT
         local a = Instance.new("Frame", e)
         if Settings.rewrittenmain.DOT == true then
-        a.Size = UDim2.new(5, 0, 5, 0)
+        a.Size = UDim2.new(2 0, 2 0)
         else
         a.Size = UDim2.new(0, 0, 0, 0)
         end
@@ -304,7 +304,7 @@ local PredictionValue = 0.124710957129853976290862
 getgenv().Prediction = 0.143105125985120958176	
 getgenv().AimPart = "UpperTorso"	
 getgenv().Key = "Q"	
-getgenv().DisableKey = "*"	
+getgenv().DisableKey = "P"	
 	
 getgenv().FOV = true	
 getgenv().ShowFOV = false	
