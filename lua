@@ -104,7 +104,7 @@ local PredictionValue = 0.1259910
         else
         placemarker.Size = Vector3.new(0, 0, 0)
         end
-        placemarker.Transparency = 0.79
+        placemarker.Transparency = 1
         if Settings.rewrittenmain.DOT then
         makemarker(placemarker, placemarker, Color3.fromRGB(68, 214, 44), 0.40, 0)
         end
