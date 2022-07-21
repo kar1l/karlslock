@@ -95,7 +95,7 @@ local PredictionValue = 0.124710957129853976290862
     function noob(player)
         local character
         repeat wait() until player.Character
-        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(0, 0, 128), 0.3, 3)
+        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(68, 214, 44), 0.3, 3)
         handler.Name = player.Name
         player.CharacterAdded:connect(function(Char) handler.Adornee = Char:WaitForChild(SelectedPart) end)
 
@@ -128,7 +128,7 @@ local PredictionValue = 0.124710957129853976290862
         end
         placemarker.Transparency = 1
         if Settings.rewrittenmain.DOT then
-        makemarker(placemarker, placemarker, Color3.fromRGB(0, 0, 128), 0.40, 0)
+        makemarker(placemarker, placemarker, Color3.fromRGB(68, 214, 44), 0.40, 0)
         end
     end)
 
@@ -139,8 +139,8 @@ local PredictionValue = 0.124710957129853976290862
                 if Settings.rewrittenmain.NOTIF == true then
                     Plr = getClosestPlayerToCursor()
                 game.StarterGui:SetCore("SendNotification", {
-						Title = "esex? karl#7760",
-						Text = "(Unlocked) ",
+						Title = "Lock Notification",
+						Text = "Unlocked",
 						Icon = "",
 						Duration = 1,
 })
@@ -151,8 +151,8 @@ local PredictionValue = 0.124710957129853976290862
                 if Settings.rewrittenmain.NOTIF == true then
 
                     game.StarterGui:SetCore("SendNotification", {
-						Title = "esex? karl#7760", --THE NOTIFIACTION MESSAGE
-						Text = "(Locked) :"..tostring(Plr.Name); 
+						Title = "Lock Notification",
+						Text = "Locked On :"..tostring(Plr.Name); 
 						Icon = "",
 						Duration = 1,
 })
