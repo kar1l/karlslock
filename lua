@@ -8,17 +8,17 @@
 ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══╝╚══╝ 
 
 --]]
-
+--dont mess witht he settings unless u know what ur doing
 local Settings = {
     rewrittenmain = {
-        Enabled = true, --this is if its enabled
-        Key = "q", --the lock key, u can change it
-        DOT = true, -- this is the dot (recommended)
-        AIRSHOT = true, --easier to airshot
-        NOTIF = true, --the notification 
-        AUTOPRED = false, --auto prediction, makes the lock sort of bad but can play on 20-120+ ping
+        Enabled = true,
+        Key = "q",
+        DOT = true,
+        AIRSHOT = true,
+        NOTIF = true, 
+        AUTOPRED = false, 
         FOV = math.huge,
-        RESOVLER = false --useless
+        RESOVLER = false 
     }
 }
 
