@@ -8,7 +8,9 @@
 ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══╝╚══╝ 
 
 --]]
---dont mess witht he settings unless u know what ur doing
+
+--dont mess with he settings unless u know what ur doing
+
 local Settings = {
     rewrittenmain = {
         Enabled = true,
