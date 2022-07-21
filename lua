@@ -47,7 +47,7 @@ local PredictionValue = 0.124710957129853976290862
         e.AlwaysOnTop = Settings.rewrittenmain.DOT
         local a = Instance.new("Frame", e)
         if Settings.rewrittenmain.DOT == true then
-        a.Size = UDim2.new(5, 5, 5)
+        a.Size = UDim2.new(2, 2, 2)
         else
         a.Size = UDim2.new(0, 0, 0, 0)
         end
