@@ -117,7 +117,7 @@ local PredictionValue = 0.1259910
                 if Settings.rewrittenmain.NOTIF == true then
                     Plr = getClosestPlayerToCursor()
                 game.StarterGui:SetCore("SendNotification", {
-						Title = "Lock Notification",
+						Title = "Ashu<3 Ly",
 						Text = "Unlocked",
 						Icon = "",
 						Duration = 1,
@@ -129,7 +129,7 @@ local PredictionValue = 0.1259910
                 if Settings.rewrittenmain.NOTIF == true then
 
                     game.StarterGui:SetCore("SendNotification", {
-						Title = "Lock Notification",
+						Title = "Ashu<3 Ly",
 						Text = "Locked On :"..tostring(Plr.Name); 
 						Icon = "",
 						Duration = 1,
